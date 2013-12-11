@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#80000000">
+	  	<LinearLayout
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:layout_margin="50dp"
+		         android:orientation="vertical"
+		         android:background="#333333"
+		          >
+	
+		         <TextView
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:text="¿Está seguro de que desea eliminar ésta entrada?" 
+	    			 android:gravity="center" 
+	    			 android:padding="20dp" />
+	
+		         <Button
+		             android:id="@+id/aceptar"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:text="Aceptar" />
+	
+		         <Button
+		             android:id="@+id/cancelar"
+		             android:layout_width="fill_parent"
+			         android:layout_height="wrap_content"
+		             android:text="Cancelar" />
+	
+		 </LinearLayout>
+</LinearLayout>

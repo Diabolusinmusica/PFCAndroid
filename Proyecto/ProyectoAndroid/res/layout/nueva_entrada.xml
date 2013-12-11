@@ -1,0 +1,197 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".EntradaHorario" >
+
+    <TextView
+        android:id="@+id/CampoNombre"
+        style="@style/CamposHorario"
+        android:paddingTop="16dp"
+        android:text="Nombre" />
+
+    <Button
+        android:id="@+id/aceptarHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Aceptar" />
+
+    <TextView
+        android:id="@+id/CampoHora"
+        style="@style/CamposHorario"
+        android:layout_alignRight="@+id/CampoModo"
+        android:layout_below="@+id/NombreHorario"
+        android:layout_marginTop="24dp"
+        android:text="Hora" />
+
+    <TextView
+        android:id="@+id/CampoBluetooth"
+        style="@style/CamposHorario"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/CampoWifi"
+        android:text="3G" />
+
+    <TextView
+        android:id="@+id/CampoWifi"
+        style="@style/CamposHorario"
+        android:layout_alignBottom="@+id/checkBoxWifi"
+        android:layout_alignRight="@+id/CampoNombre"
+        android:text="Wifi" />
+
+    <EditText
+        android:id="@+id/NombreHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10" />
+
+    <TextView android:textColor="#FFFFFF"
+        android:id="@+id/mostrarHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/CampoHora"
+        android:layout_alignBottom="@+id/CampoHora"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/cambiarHora"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/CampoNotificacion"
+        style="@style/CamposHorario"
+        android:layout_alignBottom="@+id/NotificacionHorario"
+        android:layout_alignParentLeft="true"
+        android:text="Notificacion" />
+
+    <EditText
+        android:id="@+id/NotificacionHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ModosHorario"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/CampoModo"
+        style="@style/CamposHorario"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/ModosHorario"
+        android:layout_marginTop="14dp"
+        android:text="Modo" />
+
+    <Spinner
+        android:id="@+id/ModosHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/aceptarHorario"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/checkBox3g" />
+
+    <TextView
+        android:id="@+id/diaSemana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/CampoHora"
+        android:layout_marginTop="17dp"
+        style="@style/CamposHorario"
+        android:text="Día/s" />
+
+    <ToggleButton
+        android:id="@+id/toggleLunes"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CampoWifi"
+        android:layout_alignLeft="@+id/checkBoxWifi"
+        android:textOn="L"
+    	android:textOff="L" />
+
+    <ToggleButton
+        android:id="@+id/toggleMartes"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toggleLunes"
+        android:layout_toRightOf="@+id/toggleLunes"
+        android:textOn="M"
+    	android:textOff="M" />
+
+    <Button
+        android:id="@+id/cambiarHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mostrarHora"
+        android:layout_toRightOf="@+id/CampoNotificacion"
+        android:text="Cambiar Hora" />
+
+    <CheckBox
+        android:id="@+id/checkBoxWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cambiarHora"
+        android:layout_below="@+id/diaSemana"
+        android:layout_marginTop="15dp"
+        android:text="CheckBox" />
+
+    <ToggleButton
+        android:id="@+id/toggleMiercoles"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CampoWifi"
+        android:layout_toRightOf="@+id/toggleMartes"
+        android:textOff="X"
+        android:textOn="X" />
+
+    <ToggleButton
+        android:id="@+id/toggleJueves"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleMiercoles"
+        android:layout_alignBottom="@+id/toggleMiercoles"
+        android:layout_toRightOf="@+id/toggleMiercoles"
+        android:textOff="J"
+        android:textOn="J" />
+
+    <ToggleButton
+        android:id="@+id/toggleDomingo"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CampoWifi"
+        android:layout_toRightOf="@+id/toggleSabado"
+        android:textOff="D"
+        android:textOn="D" />
+
+    <ToggleButton
+        android:id="@+id/toggleViernes"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleJueves"
+        android:layout_alignBottom="@+id/toggleJueves"
+        android:layout_toRightOf="@+id/toggleJueves"
+        android:textOff="V"
+        android:textOn="V" />
+
+    <ToggleButton
+        android:id="@+id/toggleSabado"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CampoWifi"
+        android:layout_toRightOf="@+id/toggleViernes"
+        android:textOff="S"
+        android:textOn="S" />
+
+    <CheckBox
+        android:id="@+id/checkBox3g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxWifi"
+        android:layout_alignTop="@+id/CampoBluetooth"
+        android:text="CheckBox" />
+
+</RelativeLayout>

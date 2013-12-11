@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".NuevaEntradaGPS" >
+
+    <TextView
+        android:id="@+id/CampoNombre"
+        style="@style/CamposHorario"
+        android:paddingTop="16dp"
+        android:text="Nombre" />
+
+    <TextView
+        android:id="@+id/campoLugar"
+        style="@style/CamposHorario"
+        android:layout_alignRight="@+id/CampoNotificacion"
+        android:layout_below="@+id/nombreGPS"
+        android:layout_marginTop="24dp"
+        android:text="Lugar" />
+
+    <TextView
+        android:id="@+id/CampoBluetooth"
+        style="@style/CamposHorario"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/CampoWifi"
+        android:text="3G" />
+
+    <TextView
+        android:id="@+id/CampoWifi"
+        style="@style/CamposHorario"
+        android:layout_alignBottom="@+id/checkBoxWifi"
+        android:layout_alignRight="@+id/CampoNombre"
+        android:text="Wifi" />
+
+    <EditText
+        android:id="@+id/nombreGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/mostrarLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/campoLugar"
+        android:layout_alignBottom="@+id/campoLugar"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/CampoNotificacion"
+        android:text="TextView"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/notificacionGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ModosHorario"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/CampoModo"
+        style="@style/CamposHorario"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/ModosHorario"
+        android:layout_marginTop="14dp"
+        android:text="Modo" />
+
+    <Spinner
+        android:id="@+id/ModosHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/notificacionGPS"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/checkBox3g" />
+
+    <CheckBox
+        android:id="@+id/checkBox3g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxWifi"
+        android:layout_alignTop="@+id/CampoBluetooth"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/checkBoxWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/campoLugar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="CheckBox" />
+
+    <Button
+        android:id="@+id/aceptarGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/checkBox3g"
+        android:text="Aceptar" />
+
+    <Button
+        android:id="@+id/volverBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Volver al Mapa" />
+
+    <TextView
+        android:id="@+id/CampoNotificacion"
+        style="@style/CamposHorario"
+        android:layout_alignBaseline="@+id/notificacionGPS"
+        android:layout_alignBottom="@+id/notificacionGPS"
+        android:layout_alignParentLeft="true"
+        android:text="Notificacion" />
+
+</RelativeLayout>

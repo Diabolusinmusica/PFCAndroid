@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.upna.proyecto.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
+
+    <permission
+        android:name="com.upna.proyecto.android.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- Permisos para los Mapas -->
+    <uses-permission android:name="com.upna.proyecto.android.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Permisos para el Wifi -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <!-- Permisos para el sonido -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" >
+    </uses-permission>
+
+    <!-- Permisos para 3G -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.upna.proyecto.android.Main"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.upna.proyecto.android.ConfigHorario"
+            android:label="@string/title_activity_config_horario" >
+        </activity>
+        <activity
+            android:name="com.upna.proyecto.android.ConfigGPS"
+            android:label="@string/title_activity_config_gps" >
+        </activity>
+        <activity
+            android:name="com.upna.proyecto.android.NuevaEntrada"
+            android:label="@string/title_activity_nueva_entrada" >
+        </activity>
+        <activity
+            android:name="com.upna.proyecto.android.EditarEntradas"
+            android:label="@string/title_activity_editar_entradas" >
+        </activity>
+
+        <receiver
+            android:name="com.upna.proyecto.android.MyBroadcastReceiver"
+            android:process=":remote" >
+        </receiver>
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name="com.upna.proyecto.android.Mapa"
+            android:label="@string/title_activity_mapa" >
+        </activity>
+        <activity
+            android:name="com.upna.proyecto.android.NuevaEntradaGPS"
+            android:label="@string/title_activity_nueva_entrada_gps" >
+        </activity>
+        <activity
+            android:name="com.upna.proyecto.android.EditarEntradasGPS"
+            android:label="@string/title_activity_editar_entradas_gps" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBCTIOyBFCSrgu75ZKs9HyZk1AmOXAeFpA" />
+
+        <activity
+            android:name="com.upna.proyecto.android.MapaEdit"
+            android:label="@string/title_activity_mapa_edit" >
+        </activity>
+    </application>
+	<application android:name="Estado" android:icon="@drawable/ic_launcher" android:label="@string/app_name"></application>
+</manifest>
